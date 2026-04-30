@@ -17,9 +17,11 @@ rule link
 # Building object files
 build out/main.o: compile main.cpp
 build out/Node.o: compile src/Node.cpp
-build out/TDA_Lista_Circular_Doble.o: compile src/TDA_Lista_Circular_Doble.cpp
+build out/Queue.o: compile src/Queue.cpp
+build out/Stack.o: compile src/Stack.cpp
+build out/Linked_List.o: compile src/Linked_List.cpp
 
 # Link executable 
-build out/main: link out/main.o out/Node.o out/TDA_Lista_Circular_Doble.o
+build out/main: link out/main.o out/Node.o out/Linked_List.o out/Stack.o out/Queue.o
 
 default out/main
