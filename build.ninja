@@ -15,7 +15,7 @@ rule link
     description = Linking $out
 
 # Building object files
-build out/main.o: compile src/main.cpp
+build out/main.o: compile main.cpp
 build out/Node.o: compile src/Node.cpp
 build out/TDA_Lista_Circular_Doble.o: compile src/TDA_Lista_Circular_Doble.cpp
 
