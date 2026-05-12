@@ -1,4 +1,5 @@
 #include "Stack.h"
+#include "Coord.h"
 
 template <class T> Stack<T>::Stack() {
     this->TOP = INITIAL_VALUE;
@@ -56,3 +57,4 @@ template <class T> void Stack<T>::Print() {
 template class Stack<int>;
 template class Stack<float>;
 template class Stack<char>;
+template class Stack<Coord>;

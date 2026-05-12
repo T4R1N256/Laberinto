@@ -1,5 +1,6 @@
 #include "Linked_List.h"
 #include "Node.h"
+#include "Coord.h"
 #include <iostream>
 
 template <class T> Linked_List<T>::Linked_List() {
@@ -8,6 +9,9 @@ template <class T> Linked_List<T>::Linked_List() {
 }
 
 template <class T> Linked_List<T>::~Linked_List() {
+  if (head == NULL)
+    return;
+
   Node<T> *actual = head;
 
   do {
@@ -55,7 +59,9 @@ template <class T> void Linked_List<T>::insertAfter(Node<T> *n, T d) {
 template <class T> void Linked_List<T>::insertFirst(T d) {
   Node<T> *newNode = new Node<T>(d);
 
-  if (!isEmpty()) {
+  if (isEmpty()) {
+    head = newNode;
+  } else {
     newNode->setPrevious(head);
     newNode->setNext(head->getNext());
 
@@ -195,5 +201,7 @@ template <class T> void Linked_List<T>::printBackwards() {
 template <class T> int Linked_List<T>::getSize() { return size; }
 
 template class Linked_List<int>;
+template class Linked_List<int *>;
 template class Linked_List<float>;
 template class Linked_List<char>;
+template class Linked_List<Coord>;
