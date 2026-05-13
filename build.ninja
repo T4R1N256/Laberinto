@@ -20,8 +20,9 @@ build out/Node.o: compile src/Node.cpp
 build out/Queue.o: compile src/Queue.cpp
 build out/Stack.o: compile src/Stack.cpp
 build out/Linked_List.o: compile src/Linked_List.cpp
+build out/Coord.o: compile src/Coord.cpp
 
-# Link executable 
-build out/main: link out/main.o out/Node.o out/Linked_List.o out/Stack.o out/Queue.o
+# Link executable
+build out/main: link out/main.o out/Node.o out/Linked_List.o out/Stack.o out/Queue.o out/Coord.o
 
 default out/main

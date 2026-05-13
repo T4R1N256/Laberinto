@@ -6,8 +6,8 @@
 #include <iostream>
 using namespace std;
 
-const int COLS = 5;
-const int ROWS = 5;
+const int COLS = 12;
+const int ROWS = 12;
 
 void resolverBFS(int arr[ROWS][COLS]);
 void resolverDFS(int arr[ROWS][COLS]);
@@ -53,7 +53,10 @@ void mostrarLaberinto(int arr[ROWS][COLS]) {
         cout << "|";
       } else if (curr == 2) {
         cout.width(4);
-        cout << ".";
+        cout << "o";
+      } else if (curr == 3) {
+        cout.width(4);
+        cout << "*";
       } else {
         cout.width(4);
         cout << " ";
@@ -209,11 +212,19 @@ void resolverBFS(int arr[ROWS][COLS]) {
 }
 
 int main() {
-  int laberinto[ROWS][COLS] = {{0, 0, 0, 1, 0},
-                               {0, 1, 0, 1, 0},
-                               {0, 0, 0, 0, 1},
-                               {0, 1, 1, 1, 0},
-                               {0, 0, 0, 0, 0}};
+  int laberinto[ROWS][COLS] = {
+{0,1,0,0,0,1,0,1,1,1,0,1},
+{0,0,0,1,0,1,0,1,1,0,0,0},
+{1,0,0,0,0,0,0,0,1,0,0,1},
+{0,0,1,1,0,0,1,0,0,0,0,1},
+{0,1,0,0,0,0,1,1,1,1,1,1},
+{1,0,0,1,0,0,0,1,1,0,1,0},
+{0,0,0,1,1,0,0,0,0,0,0,0},
+{0,1,0,0,0,1,0,1,1,0,1,0},
+{1,1,0,0,0,1,0,0,1,0,1,1},
+{1,1,0,1,0,1,0,0,1,0,1,0},
+{0,0,0,1,1,1,0,1,1,0,1,0},
+{0,1,0,1,1,1,0,0,1,0,0,0}};
 
   int opt;
 
