@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-const int SIZE = 50;
+const int SIZE = 500;
 const int INITIAL_VALUE = 0;
 
 template <class T> class Stack {

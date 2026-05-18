@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-const int SIZEC = 50;
+const int SIZEC = 500;
 
 template <class T> class Queue {
     private:
